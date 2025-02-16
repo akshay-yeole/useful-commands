@@ -1,5 +1,19 @@
 # Useful Commands
 
+## Index
+
+- [Node.js](#nodejs)
+    - [1. Version & Environment](#1-version--environment)
+    - [2. Running Node.js Files](#2-running-nodejs-files)
+    - [3. Package Management (npm)](#3-package-management-npm)
+    - [4. Running Scripts (Defined in package.json)](#4-running-scripts-defined-in-packagejson)
+    - [5. Using npx (Run Packages Without Installing)](#5-using-npx-run-packages-without-installing)
+    - [6. Debugging & Monitoring](#6-debugging--monitoring)
+    - [7. Managing Environment Variables (Windows)](#7-managing-environment-variables-windows)
+    - [8. Working with Dependencies](#8-working-with-dependencies)
+    - [9. Checking & Fixing Issues](#9-checking--fixing-issues)
+    - [10. Creating and Running a Simple Server](#10-creating-and-running-a-simple-server)
+
 ## Node.js
 
 ### 1. Version & Environment
