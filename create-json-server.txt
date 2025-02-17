@@ -1,0 +1,64 @@
+install json server
+    npm install -g json-server
+
+check version
+    json-server -v
+
+get help
+    json-server -help
+
+Now it’s time to start our json-server. Below is a sample file with my employees json data.
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "Pankaj",
+      "salary": "10000"
+    },
+    {
+      "name": "David",
+      "salary": "5000",
+      "id": 2
+    }
+  ]
+}
+
+Run server  
+     json-server --watch db.json
+
+read all employees by below command
+    curl -X GET -H "Content-Type: application/json"  "https://localhost:3000/employees"
+
+
+get by id
+    $ curl -X GET -H "Content-Type: application/json"  "https://localhost:3000/employees/1"
+
+create
+    $ curl -X POST -H "Content-Type: application/json" -d '{"name": "Lisa","salary": "2000"}' "https://localhost:3000/employees"
+
+update
+    $ curl -XPUT -H "Content-Type: application/json" -d '{"name": "Lisa", "salary": "8000"}' "https://localhost:3000/employees/3"
+
+delete
+    $ curl -X DELETE -H "Content-Type: application/json"  "https://localhost:3000/employees/2"
+
+##
+json-server custom routes
+
+Create a file with custom routes for our json-server to use. routes.json
+{
+  "/employees/list": "/employees",
+  "/employees/get/:id": "/employees/:id",
+  "/employees/create": "/employees",
+  "/employees/update/:id": "/employees/:id",
+  "/employees/delete/:id": "/employees/:id"
+}
+
+now run command
+json-server --port 7000 --routes routes.json --watch db.json
+
+
+ref :  
+https://www.digitalocean.com/community/tutorials/json-server
+https://www.javatpoint.com/json-server
+

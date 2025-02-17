@@ -1,0 +1,9 @@
+create folder `local-server`
+open folder and hit below command
+    npm init -y (create default package.json)
+    npm i http-server
+
+Add script to package.json file
+    "start":"http-server --cors * -c 1"
+
+Run npm start command to start server.
